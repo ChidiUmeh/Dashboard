@@ -24,7 +24,7 @@ else:
 
 # dict = {'Histogram':'histogram','Box plot':'box', 'Bar Chart':'bar', 'Scatter Plot':'scatter'}
 plots = ['Histogram','Box plot', 'Bar Chart']
-numeric = ['Age at enrollment', 'Average curricular units grade','Unemployment rate','Inflation rate','GDP','Previous qualification (grade)','Admission grade','Curricular units 1st sem (grade)','Curricular units 2nd sem (grade)']
+numeric = ['Age at enrollment','Previous qualification (grade)','Admission grade', 'Unemployment rate','Inflation rate','GDP','Curricular units 1st sem (grade)','Curricular units 2nd sem (grade)','Curricular units 1st sem (credited)','Curricular units 1st sem (enrolled)','Curricular units 1st sem (evaluations)','Curricular units 1st sem (approved)','Curricular units 1st sem (without evaluations)','Curricular units 2nd sem (credited)','Curricular units 2nd sem (enrolled)','Curricular units 2nd sem (evaluations)','Curricular units 2nd sem (approved)','Curricular units 2nd sem (without evaluations)']
 numeric_2 =  ['Average curricular units grade','Admission grade_encoded', 'Curricular units 1st sem (grade)','Curricular units 2nd sem (grade)']
 category =  ['Daytime/evening attendance','Displaced','Educational special needs','Debtor','Tuition fees up to date','Gender','Scholarship holder','International','Marital status','Target','Previous qualification','Nationality','Course','Curricular units 1st sem (credited)','Curricular units 1st sem (enrolled)','Curricular units 1st sem (evaluations)','Curricular units 1st sem (approved)','Curricular units 1st sem (without evaluations)','Curricular units 2nd sem (credited)','Curricular units 2nd sem (enrolled)','Curricular units 2nd sem (evaluations)','Curricular units 2nd sem (approved)','Curricular units 2nd sem (without evaluations)']
 for cat in category:
@@ -170,7 +170,7 @@ with col1:
 
 
 
-data1 = px.scatter(df, x='Average curricular units grade',y='Admission grade_encoded', color='Target')
+data1 = px.scatter(df, x='Average curricular units grade',y='Admission grade', color='Target')
 data1['layout'].update(title='Relationship between Admission grade and Average curricular units grade',
                         xaxis=dict(title='Average curricular units grade',titlefont=dict(size=20)),yaxis=dict(title='Admission grade',
                                                             titlefont=dict(size=19)))
